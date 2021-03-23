@@ -1,0 +1,290 @@
+/* Universal Selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+html {
+    background-image: url("../images/paper.gif");
+}
+body {
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 5px solid steelblue;
+    box-shadow: 5px 5px 8px grey;
+}
+
+h1 {
+    font-size: 250%;
+    margin-left: 10px; 
+    margin-top: 15px;
+}
+header {
+    border-bottom: 5px solid steelblue;
+    background-image: linear-gradient(white, lightsteelblue);
+}
+header h2 {
+    font-size: 250%;
+    color: steelblue;
+    font-style: italic;
+    text-shadow: 2px 2px 15px #888888;
+    margin-top: 15px;
+}
+header h3 {
+    font-size: 150%;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+header img {
+    float: left;
+    margin-left: .5em;
+    margin-right: 1.5em;
+}
+/* Horizontal Menu Bar - W3 Flot and block style*/
+
+#nav_menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: steelblue;
+}
+
+#nav_menu ul li {
+    float: left;
+}
+
+#nav_menu #about {
+    float: right;
+}
+
+#nav_menu ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 1.5em;
+    text-decoration: none;
+}
+
+#nav_menu ul li a:hover {
+    background-color: lightsteelblue;
+    color: black;
+}
+
+/* Horizontal Menu Bar Style -Inline Nav Menu /
+
+#nav_menu ul {
+    list-style: none;
+    text-align: center;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 8px 0;
+    background-color: #afeeee;
+}
+
+#nav_menu ul li {
+    display: inline;
+    padding: 5px 20px;
+    border-right: 3px solid black;
+}
+#nav_menu #last {
+    border-right: none;
+}
+
+#nav_menu ul li a {
+    text-decoration: none;
+    font-weight: bold;
+}
+#nav_menu ul li a:hover {
+    color: red;
+}
+*/
+/* Vertical Navigation List */
+
+#nav_list ul {
+    list-style: none;
+
+}
+#nav_list ul li {
+    border: 2px solid black;
+    width: 90%;
+}
+#nav_list ul li a {
+    display: block;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: lightsteelblue;
+    padding: .5em;
+    color: black;
+}
+#nav_list ul li a:hover, #nav_list ul li a:focus {
+    background-color: steelblue;
+    color: white
+}
+main {
+    clear: both;
+}
+
+section h2, section h3, aside h2 {
+    font-size: 150%;
+    margin-left: .5em;
+}
+aside ul {
+    margin-left: 2em;
+}
+section p {
+    margin: 1em;
+}
+section blockquote {
+    margin-left: 3em;
+    margin-right: 3em;
+    font-size: 90%;
+    color: navy;
+    border-left: 3px solid maroon;
+    padding-left: 5px;
+    background-color: lightgreen;
+}
+
+/* Link colors for section */
+/* unvisited link */
+section a:link {
+    color: maroon;
+}
+
+/* visited link */
+section a:visited {
+    color: maroon;
+}
+
+/* mouse over link */
+section a:hover {
+    color: steelblue;
+}
+
+/* selected link */
+section a:active {
+    color: steelblue;
+}
+
+/* Link colors for aside */
+
+/* unvisited link */
+aside a:link {
+    color: steelblue;
+}
+
+/* visited link */
+aside a:visited {
+    color: steelblue;
+}
+
+/* mouse over link */
+aside a:hover {
+    color: maroon;
+}
+
+/* selected link */
+aside a:active {
+    color: maroon;
+}
+
+aside a {
+    font-weight: bold;
+}
+
+.homesection {
+    width: 50%;
+    float: left;
+}
+
+.sidebar {
+    width: 25%;
+    padding-top: 20px;
+}
+#firstcol {
+    float: left;
+}
+#thirdcol {
+    float: right;
+    margin-right: .5em;
+
+}
+.sidebar h2 {
+    font-size: 180%;
+    color: maroon;
+}
+
+.sidebar li {
+    margin-top: 5px;
+    margin-left: .5em;
+}
+footer {
+    background-color: steelblue;
+    margin-top: 10px;
+    clear: both;
+}
+footer p {
+    font-size: 75%;
+    text-align: center;
+    color: white;
+    padding: 2em;
+    font-weight: bold;
+    font-variant: small-caps;
+    margin-bottom: 0;
+}
+
+#mobilemenu {
+    display: none;
+}
+@media only screen and (max-width: 900px) {
+
+    html {
+        background-image: none;
+    }
+    body {
+        box-shadow: none;
+        border: none;
+        font-size: 90%;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .homesection {
+        float: none;
+        width: 100%;
+    }
+    .sidebar {
+        width: 100%;
+        float: none;
+    }
+    #nav_menu {
+        display: none;
+    }
+    #mobilemenu {
+        display: block;   
+    }
+    .slicknav_menu {
+        background-color: steelblue !important;
+    }
+}
+    @media only screen and (max-width: 479px) {
+        header img {
+            float: none;
+            display: block;
+            margin: auto;
+        }
+        header h2, header h3 {
+            text-align: center;
+        }
+}
+
